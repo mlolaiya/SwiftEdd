@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Back Road Tour</title>
+    <!-- Style css -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&family=Heebo:wght@100;200;300;400;500&family=Hind+Siliguri:wght@300;400;500;600&family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      href="./Images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <!-- sign up form -->
+    <section>
+      <div class="main-form">
+        <article class="contact-form">
+          <h3>log in</h3>
+          <form method="post">
+            <div class="form-group">
+              <!-- inputs -->
+
+              <label for="email" class="form-label">email address</label>
+              <input
+                type="email"
+                placeholder="email@example.com"
+                class="form-control"
+                name="email"
+              />
+
+              <div class="password-container">
+                <label for="psw" class="form-label">Password</label>
+                <input
+                  type="password"
+                  placeholder="Enter Password"
+                  class="form-control"
+                  name="psw"
+                  required
+                  id="id_password"
+                />
+                <i class="fa-solid fa-eye" id="togglePassword"></i>
+              </div>
+
+              <span class="forgot-password">
+                <a href="#">forgot password?</a>
+              </span>
+            </div>
+            <!-- button -->
+            <button type="submit" class="submit-btn btn">Log in</button>
+          </form>
+          <div class="form-footer">
+            <p>Don't have an account? <a href="login.html">Sign up</a>.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+    <!-- end of contact -->
+    <script src="app.js"></script>
+  </body>
+</html>
