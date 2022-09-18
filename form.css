@@ -492,11 +492,11 @@ small {
 @media screen and (min-width: 676px) {
   .foot-icons {
     top: 35%;
-    left: 18%;
+    left: 10%;
   }
 }
 @media screen and (min-width: 900px) {
   .foot-icons {
-    left: 35%;
+    left: 20%;
   }
 }
