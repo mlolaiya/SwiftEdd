@@ -4,9 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Back Road Tour</title>
+    <title>Login</title>
     <!-- Style css -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="form.css" />
+
+
     <!-- font awesome -->
     <link
       rel="stylesheet"
@@ -24,6 +27,45 @@
     />
   </head>
   <body>
+    <header>
+      <!-- navbar -->
+    <nav class="nav" id="nav">
+      <div class="nav-center">
+        <!-- nav header -->
+        <div class="nav-header">
+          <h4 class="logo">swift<span class="logo-span">ED</span></h4>
+          <button type="button" class="nav-toggle">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+
+        <!-- nav-links -->
+        <div class="nav-link">
+        <ul class="nav-links">
+          <li>
+            <a href="index.html">home</a>
+          </li>
+          <li>
+            <a href="blog.html">blog</a>
+          </li>
+          <li>
+            <a href="feature.html">feature</a>
+          </li>
+          <li>
+            <a href="about.html">about us</a>
+          </li>
+          <li>
+            <a href="courses.html">courses</a>
+          </li>
+          <li class="sign-up-btn">
+            <a href="signup.html">sign up</a>
+          </li>
+        </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- end of navbar -->
+    </header>
     <!-- sign up form -->
     <section>
       <div class="main-form">
@@ -59,15 +101,65 @@
               </span>
             </div>
             <!-- button -->
-            <button type="submit" class="submit-btn btn">Log in</button>
+            <button type="submit" class="submit-btn btn" id="login-form-submit">Log in</button>
+
+            <!-- The Horizontal Rule -->
+            <div class="button-divider"><span class="divide"> or </span></div>
+
+            <!-- Alternative Signup -->
+            <button type="submit" class="submit-btn btn btn-special">
+              <i class="foot-icons fab fa-google fa-1x"></i> Continue with
+              Google
+            </button>
+            <button type="submit" class="submit-btn btn btn-special">
+              <i class="foot-icons fa-brands fa-linkedin-in"></i>
+              Continue with LinkedIn
+            </button>
           </form>
           <div class="form-footer">
-            <p>Don't have an account? <a href="login.html">Sign up</a>.</p>
+            <p>Don't have an account? <a href="signup.html">Sign up</a></p>
           </div>
         </article>
       </div>
     </section>
     <!-- end of contact -->
+     <footer>
+      <div class="footer-top">
+        <div class="socials">
+          <p>SwiftEd</p>
+          <a href="#" style="grid-column: 2;"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+        <div class="download-app">
+          <a href="#">
+            <img src="./image/Group 22.svg" alt="">
+            <div class="link">
+              Android app on <span>GOOGLE PLAY</span>
+            </div>
+          </a>
+          <a href="#">
+            <img src="./image/Vector.svg" alt="">
+            <div class="link">
+              Download on the <span>App Store</span>
+            </div>
+          </a>
+        </div>
+      </div>
+      </div>
+      <hr>
+      <div class="footer-bottom">
+        <p>2022 SwiftED. All rights reserved.</p>
+        <nav>
+          <a href="#">Terms and Conditions</a>
+          <a href="#">Cookies</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Security Policy</a>
+          <a href="#">Gdpr</a>
+        </nav>
+      </div>
+    </footer>
     <script src="app.js"></script>
   </body>
 </html>

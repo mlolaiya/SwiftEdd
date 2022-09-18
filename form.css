@@ -1,0 +1,502 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+  --clr-primary: #0000ff;
+  --clr-primary-light: #ccccff;
+  --clr-background: #ccccff;
+  --clr-primary-5: grey;
+  --clr-grey-1: #102a42;
+  --clr-grey-2: lightgray;
+  --clr-grey-5: #302727;
+  --clr-grey-10: #f1f5f8;
+  --clr-white: #fff;
+  --ff-primary: "Fira Code", monospace;
+  --ff-secondary: "Grand Hotel", cursive;
+  --transition: all 0.3s linear;
+  --spacing: 0.11rem;
+  --radius: 0.5rem;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--ff-primary);
+  background: var(--clr-background);
+  color: var(--clr-grey-1);
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+a {
+  text-decoration: none;
+}
+img {
+  width: 100%;
+  display: block;
+}
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  margin-bottom: 1.25rem;
+}
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+/* more global css */
+
+.btn {
+  text-transform: uppercase;
+  background: var(--clr-primary);
+  color: var(--clr-white);
+  padding: 0.375rem 0.75rem;
+  letter-spacing: var(--spacing);
+  display: inline-block;
+  font-weight: 700;
+  transition: var(--transition);
+  font-size: 0.875rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+.btn:hover {
+  color: var(--clr-primary);
+  background: var(--clr-primary-light);
+}
+.clearfix::after,
+.clearfix::before {
+  content: "";
+  clear: both;
+  display: table;
+}
+.section-title h3 {
+  font-family: var(--ff-secondary);
+  color: var(--clr-primary);
+}
+.section-title {
+  margin-bottom: 2rem;
+}
+.section-center {
+  padding: 4rem 0;
+  width: 85vw;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+
+@media screen and (min-width: 992px) {
+  .section-center {
+    width: 95vw;
+    padding: 4rem 1rem;
+  }
+}
+
+/*========= Nav Bar ========= */
+
+/* To hide nav bar with css */
+.nav-links {
+  margin: 0;
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s ease-in-out all;
+}
+
+.nav {
+  background: var(--clr-white);
+}
+
+.nav-links li {
+  padding: 0.6rem;
+  text-transform: capitalize;
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--clr-grey-1);
+}
+
+.nav-links li a:hover {
+  color: var(--clr-primary);
+  cursor: pointer;
+}
+
+/* to show navbar with css */
+.show-links {
+  height: 16rem;
+}
+
+li {
+  list-style-type: none;
+}
+
+.logo {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+
+.logo-span {
+  color: var(--clr-primary);
+  text-transform: none;
+}
+
+.nav-center {
+  width: 95vw;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-toggle {
+  background: transparent;
+  border-color: transparent;
+  font-size: 1.5rem;
+  transition: var(--transition);
+}
+
+.nav-toggle:hover {
+  transform: scale(1.5);
+  cursor: pointer;
+}
+
+.nav-btn {
+  background: transparent;
+  border-color: transparent;
+  color: var(--clr-primary-5);
+  font-size: 2rem;
+  cursor: pointer;
+  justify-self: end;
+}
+
+@media screen and (min-width: 1120px) {
+  .nav {
+    min-width: 100vw;
+    margin: 0 auto;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav-center {
+    min-width: 80vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    column-gap: 30%;
+  }
+
+  .nav-links {
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    /*  justify-content: right; */
+    font-weight: 500;
+    font-size: 20px;
+  }
+
+  .nav-links a {
+    text-transform: capitalize;
+    color: var(--clr-primary);
+    letter-spacing: 0.1rem;
+    transition: var(--transition);
+    text-overflow: hidden;
+  }
+
+  .nav-links li:hover {
+    color: var(--clr-white);
+    background-color: var(--clr-primary);
+    border-radius: var(--radius);
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .nav-links li a:hover {
+    color: var(--clr-white);
+  }
+}
+
+@media screen and (min-width: 1294px) {
+  .nav-center {
+    column-gap: 50%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-links {
+    min-width: 50;
+  }
+}
+
+/* fixed navbar */
+.navbar-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--clr-white);
+  z-index: 2;
+  box-shadow: var(--light-shadow);
+}
+
+/*========= Sign Up & Login Section ========= */
+.main-form {
+  width: 100vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.contact {
+  background: var(--clr-grey-10);
+}
+.contact-form,
+.contact-info {
+  margin: 1rem 0;
+}
+.contact-item {
+  margin-bottom: 1.75rem;
+}
+.contact-title {
+  color: var(--clr-primary);
+  font-weight: 500;
+}
+
+.contact-form {
+  background: var(--clr-white);
+  border-radius: var(--radius);
+  text-align: left;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+  max-width: 35rem;
+  text-transform: capitalize;
+}
+.contact-form:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.contact-form h3 {
+  padding-top: 1.25rem;
+  color: var(--clr-grey-5);
+  text-align: center;
+  width: 90%;
+}
+.form-group {
+  padding: 1rem 1.5rem;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid;
+  margin-bottom: 2.33rem;
+  background: var(--clr-white);
+  border-radius: var(--radius);
+}
+
+.form-control::placeholder {
+  font-family: var(--ff-primary);
+  color: var(--clr-grey-2);
+}
+
+.submit-btn {
+  display: flex;
+  width: 90%;
+  padding: 1rem;
+  border-radius: var(--radius);
+  margin: 0 auto 2rem auto;
+  justify-content: center;
+  text-transform: capitalize;
+  letter-spacing: 0;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.75rem;
+  font-weight: 400;
+}
+.password-container {
+  position: relative;
+}
+
+small {
+  text-align: left;
+  font-size: 10px;
+  position: absolute;
+  top: 105%;
+  color: var(--clr-grey-2);
+}
+
+.password-container input[type="password"] {
+  width: 100%;
+  padding: 12px 36px 12px 12px;
+  box-sizing: border-box;
+}
+.fa-eye {
+  position: absolute;
+  top: 65%;
+  right: 4%;
+  cursor: pointer;
+  color: var(--clr-grey-2);
+}
+
+.forgot-password {
+  justify-content: right;
+  display: flex;
+  padding-top: 1px;
+}
+
+.form-footer {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.button-divider {
+  width: 90%;
+  text-align: center;
+  border-bottom: 1px solid var(--clr-grey-2);
+  line-height: 0.1em;
+  margin: 2rem auto;
+}
+
+.button-divider,
+.divide {
+  background: var(--clr-white);
+  padding: 0 10px;
+  text-transform: lowercase;
+  color: var(--clr-grey-2);
+}
+
+.btn-special {
+  background: var(--clr-white);
+  color: var(--clr-grey-5);
+  border: 1px solid var(--clr-primary);
+  position: relative;
+}
+
+.btn-special:hover {
+  color: var(--clr-white);
+}
+.foot-icons {
+  position: absolute;
+  top: 35%;
+  left: 25%;
+}
+
+.fa-google {
+  background: conic-gradient(
+      from -45deg,
+      #ea4335 110deg,
+      #4285f4 90deg 180deg,
+      #34a853 180deg 270deg,
+      #fbbc05 270deg
+    )
+    73% 55%/150% 150% no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.fa-brands {
+  color: #0077b5;
+}
+
+.contact-form,
+.contact-info {
+  float: left;
+  width: 50%;
+}
+
+@media screen and (max-width: 280px) {
+  .contact-form,
+  .contact-info {
+    float: left;
+    width: 50%;
+  }
+
+  .form-group {
+    padding: 0.5rem 1rem;
+  }
+
+  .foot-icons {
+    top: 40%;
+    left: 5%;
+  }
+
+  .btn-special {
+    font-size: 8px;
+  }
+
+  .form-control {
+    padding: 0.5rem 0.5rem;
+  }
+}
+
+@media screen and (min-width: 450px) {
+  .foot-icons {
+    top: 35%;
+    left: 7%;
+  }
+}
+@media screen and (min-width: 676px) {
+  .foot-icons {
+    top: 35%;
+    left: 18%;
+  }
+}
+@media screen and (min-width: 900px) {
+  .foot-icons {
+    left: 35%;
+  }
+}

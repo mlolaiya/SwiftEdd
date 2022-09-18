@@ -1,5 +1,8 @@
 const togglePassword = document.querySelector("#togglePassword");
 const password = document.querySelector("#eye_icon");
+const loginForm = document.getElementById("login-form");
+const loginButton = document.getElementById("login-form-submit");
+const loginErrorMsg = document.getElementById("login-error-msg");
 
 togglePassword.addEventListener("click", function (e) {
   // toggle the type attribute
@@ -10,15 +13,15 @@ togglePassword.addEventListener("click", function (e) {
   this.classList.toggle("fa-eye-slash");
 });
 
-/* const getElement = (selector) => {
-  const el = document.querySelector(selector);
-  if (el) return el;
-  throw new Error(`Please check your classes : ${selector} does not exist`);
-};
+loginButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  const username = loginForm.username.value;
+  const password = loginForm.password.value;
 
-const navToggle = getElement(".nav-toggle");
-const links = getElement(".nav-links");
-
-navToggle.addEventListener("click", function () {
-  links.classList.toggle("show-links");
-}); */
+  if (username === "user" && password === "web_dev") {
+    alert("You have successfully logged in.");
+    location.reload();
+  } else {
+    loginErrorMsg.style.opacity = 1;
+  }
+});

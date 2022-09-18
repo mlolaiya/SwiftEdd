@@ -216,7 +216,7 @@ li {
   justify-self: end;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1120px) {
   .nav {
     min-width: 100vw;
     margin: 0 auto;
@@ -227,10 +227,12 @@ li {
   }
 
   .nav-center {
+    min-width: 80vw;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     place-items: center;
-    column-gap: 25%;
+    column-gap: 30%;
   }
 
   .nav-links {
@@ -266,11 +268,6 @@ li {
 
 @media screen and (min-width: 1294px) {
   .nav-center {
-    column-gap: 30%;
-  }
-}
-@media screen and (min-width: 1124px) {
-  .nav-center {
     column-gap: 50%;
   }
 }
@@ -299,7 +296,7 @@ li {
 
 .hero-section {
   display: grid;
-  height: 80vh; /* calc(100vh - 6em); */
+  height: 80vh;
   place-items: center;
   width: 100vw;
   margin: 0 auto;
