@@ -187,7 +187,7 @@ li {
 .nav-center {
   width: 95vw;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 1rem 0;
 }
 
 .nav-header {
@@ -227,16 +227,15 @@ li {
   }
 
   .nav-center {
-    min-width: 80vw;
+    min-width: 95vw;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 10vw 50vw;
     place-items: center;
-    column-gap: 30%;
+    column-gap: 35vw;
   }
 
   .nav-links {
-    width: 100vw;
     display: flex;
     flex-wrap: wrap;
     height: auto;
@@ -268,7 +267,7 @@ li {
 
 @media screen and (min-width: 1294px) {
   .nav-center {
-    column-gap: 50%;
+    column-gap: 35vw;
   }
 }
 
@@ -317,7 +316,7 @@ li {
 h3 {
   text-transform: capitalize;
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .sub-text {
@@ -389,8 +388,8 @@ h3 {
 
 /*============= About Section ============== */
 .about-section {
-  background: var(--clr-white);
-  height: 50vh;
+  /* background: var(--clr-white); */
+  height: 70vh;
   display: grid;
   grid-template-columns: 1fr;
   place-items: center;
@@ -401,9 +400,9 @@ h3 {
 }
 
 .about-center {
+  text-align: center;
   width: 80vw;
   margin: 0 auto;
-  margin-bottom: 10rem;
   background: var(--clr-primary-light);
   border-radius: var(--radius);
 }
@@ -518,6 +517,8 @@ h3 {
 
 .feature-text {
   margin: 2rem 0;
+  text-align: center;
+  line-height: 1.5;
 }
 
 .feature {
@@ -879,6 +880,7 @@ form {
   .subscribe-text {
     line-height: 2rem;
     padding: 0 4rem;
+    text-align: center;
   }
 
   .box,

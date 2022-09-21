@@ -188,7 +188,7 @@ li {
 .nav-center {
   width: 95vw;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 1rem 0;
 }
 
 .nav-header {
@@ -228,16 +228,15 @@ li {
   }
 
   .nav-center {
-    min-width: 80vw;
+    min-width: 95vw;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 10vw 50vw;
     place-items: center;
-    column-gap: 30%;
+    column-gap: 35vw;
   }
 
   .nav-links {
-    width: 100vw;
     display: flex;
     flex-wrap: wrap;
     height: auto;
@@ -269,7 +268,7 @@ li {
 
 @media screen and (min-width: 1294px) {
   .nav-center {
-    column-gap: 50%;
+    column-gap: 35vw;
   }
 }
 
@@ -449,7 +448,7 @@ small {
 }
 
 .fa-brands {
-  color: #0077b5;
+  /* color: #0077b5; */
 }
 
 .contact-form,

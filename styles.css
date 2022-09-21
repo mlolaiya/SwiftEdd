@@ -1,6 +1,7 @@
 .choose-swiftEd {
   color: #8f00ff;
   margin-left: 1rem;
+  margin-bottom: 7rem;
 }
 img.right,
 img.top,
@@ -94,7 +95,7 @@ div.footer-bottom > nav > a {
 }
 @media screen and (min-width: 1024px) {
   section.choose-swiftEd {
-    margin-bottom: 2rem;
+    margin-bottom: 7rem;
   }
   section.choose-swiftEd > h2 {
     display: inline-block;
