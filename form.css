@@ -328,7 +328,6 @@ li {
   padding-top: 1.25rem;
   color: var(--clr-grey-5);
   text-align: center;
-  width: 90%;
 }
 .form-group {
   padding: 1rem 1.5rem;
@@ -427,9 +426,7 @@ small {
   color: var(--clr-white);
 }
 .foot-icons {
-  position: absolute;
-  top: 35%;
-  left: 25%;
+  margin-right: 1.5rem;
 }
 
 .fa-google {
@@ -453,8 +450,7 @@ small {
 
 .contact-form,
 .contact-info {
-  float: left;
-  width: 50%;
+  width: 95vw;
 }
 
 @media screen and (max-width: 280px) {
