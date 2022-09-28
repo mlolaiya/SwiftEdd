@@ -155,17 +155,21 @@ p {
 }
 
 .user-pics {
-  display: block;
   position: fixed;
   top: 5%;
   right: 5%;
   z-index: 1;
+  padding: 0;
 }
 
 .user-img {
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
+}
+
+.st-name {
+  text-align: center;
 }
 
 /* navbar */
@@ -322,7 +326,197 @@ p {
 }
 
 .profile-img {
-  background-position: cover;
-  background-size: contain;
-  height: 11rem;
+  background-position: center;
+  background-size: cover;
+
+  height: 13rem;
+}
+
+/*
+============ course selection  ============ */
+.courses {
+  display: flex;
+  justify-content: center;
+  margin: 5rem auto;
+}
+
+.course-selection {
+}
+
+.agro-courses {
+  width: 80vw;
+}
+
+.course-check {
+  padding-right: 1.5rem;
+  margin-right: 0.325rem;
+  position: relative;
+}
+.even,
+.odd {
+  padding: 1rem;
+  position: relative;
+}
+
+.even {
+  background: rgb(227, 224, 224);
+}
+
+.odd {
+  background: rgb(174, 173, 173);
+}
+
+.title-head {
+  padding-left: 2rem;
+  font-size: 22px;
+  position: relative;
+  text-transform: capitalize;
+}
+
+.c-code {
+  position: absolute;
+  font-weight: 600;
+  right: 8%;
+}
+
+/*============= Notifications ===============*/
+
+.wrapper {
+  width: 80vw;
+  margin: 2rem auto;
+}
+
+.notifications__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 105px;
+  margin-bottom: 20px;
+  padding: 0 20px;
+
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+}
+
+.notifications__item__avatar {
+  width: 75px;
+  height: 75px;
+  overflow: hidden;
+  margin-right: 20px;
+
+  border-radius: 50%;
+}
+
+.notifications__item__avatar img {
+  width: 100%;
+  height: 100%;
+}
+
+.notifications__item__content {
+  width: calc(100% - 105px);
+}
+.notifications__item__title,
+.notifications__item__message {
+  display: block;
+}
+
+.notifications__item__title {
+  letter-spacing: 2px;
+  font-family: "atvice", sans-serif;
+  font-size: 17px;
+}
+
+.notifications__item__message {
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  color: #929292;
+}
+
+.notifications__item__option {
+  width: 20px;
+  height: 20px;
+  margin: 8px 0;
+
+  border-radius: 50%;
+  color: white;
+  opacity: 0;
+
+  font-size: 10px;
+  text-align: center;
+  line-height: 20px;
+
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.notifications__item__option.archive {
+  background-color: #3dc98c;
+}
+
+.notifications__item__option.delete {
+  background-color: #c93d4d;
+}
+
+/*
+* Animation part
+*/
+.notifications__item:hover {
+  background-color: #f7f7f7;
+  transform: scale(0.95);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.notifications__item:hover .notifications__item__option {
+  opacity: 1;
+}
+
+.notifications__item.archive .notifications__item__title,
+.notifications__item.delete .notifications__item__title {
+  color: white;
+}
+
+.notifications__item.archive .notifications__item__message,
+.notifications__item.delete .notifications__item__message {
+  color: #f3f3f3;
+}
+
+.notifications__item.archive {
+  background-color: #3dc98c;
+  animation: archiveAnimation 1.5s cubic-bezier(0, 0, 0, 1.12) forwards;
+  animation-delay: 0.6s;
+}
+
+.notifications__item.delete {
+  background-color: #c93d4d;
+  animation: deleteAnimation 1.5s cubic-bezier(0, 0, 0, 1.12) forwards;
+  animation-delay: 0.6s;
+}
+
+@keyframes archiveAnimation {
+  to {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+}
+
+@keyframes deleteAnimation {
+  to {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+}
+.credit a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 800;
+}
+
+.credit {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
