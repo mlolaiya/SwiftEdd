@@ -1,0 +1,22 @@
+@media screen and (max-width: 767px) {
+    ul.agro-courses {
+        width: 95vw;
+    }
+    li.odd,
+    li.even {
+        display: grid;
+        grid-template-columns: 5vw 83vw;
+        column-gap: 0.2rem;
+    }
+    li.odd > div.text,
+    li.even > div.text {
+        display: grid;
+        grid-template-columns: 70vw 13vw;
+        align-items: center;
+        justify-content: center;
+    }
+    div.title-head {
+        padding-left: 0;
+        text-align: center;
+    }
+}
